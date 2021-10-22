@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
@@ -11,8 +12,9 @@ module.exports = {
     contentBase: './dist',
   },
   plugins: [
+    new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'myapp',
+      title: 'gify practice',
       template: './src/index.html',
     }),
   ],
